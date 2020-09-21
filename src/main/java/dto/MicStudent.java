@@ -31,4 +31,23 @@ public class MicStudent {
     public String getTelefoonnummer() {
         return telefoonnummer;
     }
+
+    public MicStudent() {
+    }
+
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
+    public void setNummer(int nummer) {
+        this.nummer = nummer;
+    }
+
+    public void setEmailadres(String emailadres) {
+        this.emailadres = emailadres;
+    }
+
+    public void setTelefoonnummer(String telefoonnummer) {
+        this.telefoonnummer = telefoonnummer;
+    }
 }
