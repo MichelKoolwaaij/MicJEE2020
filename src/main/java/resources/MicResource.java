@@ -4,6 +4,7 @@ import dto.MicStudent;
 import services.StudentService;
 
 import javax.ejb.Singleton;
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -15,7 +16,13 @@ import javax.ws.rs.core.Response;
 @Path("/demo/")
 public class MicResource {
 
-    private StudentService service = new StudentService();
+
+    private StudentService service;
+
+    @Inject
+    public void setService(StudentService service) {
+        this.service = service;
+    }
 
     @Path("test")
     @Produces(MediaType.TEXT_HTML)
@@ -23,13 +30,6 @@ public class MicResource {
     public String printHTML(){
         return ("Another cool webpage in OOSE DEA");
 
-    }
-
-    @Path("student")
-    @Produces(MediaType.APPLICATION_JSON)
-    @GET
-    public MicStudent getJSONStudent(){
-        return service.getStudent();
     }
 
     @Path("students")
