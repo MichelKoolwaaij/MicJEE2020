@@ -12,7 +12,6 @@ import javax.ws.rs.core.Response;
 /**
  * Created by Michel Koolwaaij on 17-09-20.
  */
-@Singleton
 @Path("/demo/")
 public class MicResource {
 

@@ -8,12 +8,12 @@ import org.junit.jupiter.api.Test;
 /**
  * Created by Michel Koolwaaij on 21-09-20.
  */
-public class TestStudentService {
-    private StudentService sut;
+public class TestStudentServiceWithoutPersistence {
+    private StudentServiceWithoutPersistence sut;
 
     @BeforeEach
     public void init(){
-        sut = new StudentService();
+        sut = new StudentServiceWithoutPersistence();
     }
 
     @Test

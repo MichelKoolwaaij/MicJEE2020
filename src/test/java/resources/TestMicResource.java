@@ -4,7 +4,7 @@ import dto.MicStudent;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import services.StudentService;
+import services.StudentServiceWithoutPersistence;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -16,12 +16,12 @@ import static org.mockito.Mockito.when;
 public class TestMicResource {
 
     private MicResource sut;
-    private StudentService service;
+    private StudentServiceWithoutPersistence service;
 
     @BeforeEach
     public void init(){
         sut = new MicResource();
-        service = mock(StudentService.class);
+        service = mock(StudentServiceWithoutPersistence.class);
 
     }
 
