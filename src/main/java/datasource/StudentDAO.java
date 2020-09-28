@@ -112,7 +112,7 @@ public class StudentDAO {
                 studenten.add(student);
             }
             ps.close();
-            closeConnection();
+
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "Error communicating with database " + properties.getProperty("connectionString"), e);
         }

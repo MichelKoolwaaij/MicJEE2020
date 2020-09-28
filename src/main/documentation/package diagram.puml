@@ -1,0 +1,31 @@
+@startuml
+
+package DAO{
+ class StudentDAO
+}
+package DTO{
+Student <-- StudentDAO
+}
+
+package services{
+interface StudentService
+
+StudentServiceWithPersistence --|> StudentService
+StudentServiceWithoutPersistence --|> StudentService
+StudentService --> Student
+StudentServiceWithPersistence --> StudentDAO
+
+}
+
+package resources{
+  MicResource --> StudentService
+}
+
+package Exceptions{
+  StudentNotFoundExceptionMapper --> StudentNotFoundException
+  StudentNotFoundException <-- StudentService
+}
+
+
+
+@enduml

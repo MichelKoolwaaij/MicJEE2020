@@ -1,0 +1,25 @@
+@startuml
+
+Node "<<device>> client" as client{
+  Node "<<Execution Environment>> Safari 13"{
+
+  }
+
+}
+
+Node "<<device>> macbook" as macbook{
+    Node "<<Execution Environment>> tomee 8" as tomee{
+
+    Artifact "micjee.war"
+    }
+
+    Node "<<database system>> MariaDB 15.1" as mariadb{
+       Artifact "micjee.ddl"
+    }
+
+    tomee <--> mariadb : <<protocol>> tcp/ip
+}
+
+client <--> macbook : REST over HTTP
+
+@enduml

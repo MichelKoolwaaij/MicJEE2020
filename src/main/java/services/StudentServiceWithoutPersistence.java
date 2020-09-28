@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by Michel Koolwaaij on 18-09-20.
  */
-@Default
+@Alternative
 public class StudentServiceWithoutPersistence implements StudentService {
     private List<MicStudent> students = new ArrayList<>();
 

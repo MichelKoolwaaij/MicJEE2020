@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by Michel Koolwaaij on 24-09-20.
  */
-@Alternative
+@Default
 public class StudentServiceWithPersistence implements StudentService{
     StudentDAO dao;
 
